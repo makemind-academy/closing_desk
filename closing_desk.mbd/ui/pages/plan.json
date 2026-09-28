@@ -1,0 +1,732 @@
+{
+ "type": "page",
+ "metadata": {
+  "title": "Programme"
+ },
+ "state": {
+  "initial": {
+   "job": "JOB 2026-114 · APT 1204 KITCHEN REFIT",
+   "lead": "Site lead M. Shaw",
+   "closes": "closes 2026-09-12",
+   "tasks": [
+    {
+     "id": "t1",
+     "label": "Strip-out",
+     "start": "2026-09-01",
+     "end": "2026-09-02",
+     "progress": 1.0,
+     "group": "Strip-out",
+     "color": "#8c6b52"
+    },
+    {
+     "id": "t2",
+     "label": "First-fix plumbing",
+     "start": "2026-09-02",
+     "end": "2026-09-03",
+     "progress": 1.0,
+     "dependsOn": [
+      "t1"
+     ],
+     "group": "Wet trades",
+     "color": "#5b7fa6"
+    },
+    {
+     "id": "t3",
+     "label": "First-fix electrics",
+     "start": "2026-09-02",
+     "end": "2026-09-04",
+     "progress": 0.8,
+     "dependsOn": [
+      "t1"
+     ],
+     "group": "Wet trades",
+     "color": "#5b7fa6"
+    },
+    {
+     "id": "t4",
+     "label": "Wall tiling",
+     "start": "2026-09-04",
+     "end": "2026-09-07",
+     "progress": 0.3,
+     "dependsOn": [
+      "t2"
+     ],
+     "group": "Wet trades",
+     "color": "#5b7fa6"
+    },
+    {
+     "id": "t5",
+     "label": "Carcasses",
+     "start": "2026-09-07",
+     "end": "2026-09-09",
+     "progress": 0.0,
+     "dependsOn": [
+      "t4"
+     ],
+     "group": "Fit-out",
+     "color": "#3b6b45"
+    },
+    {
+     "id": "t6",
+     "label": "Worktop template",
+     "start": "2026-09-09",
+     "end": "2026-09-10",
+     "progress": 0.0,
+     "dependsOn": [
+      "t5"
+     ],
+     "group": "Fit-out",
+     "color": "#3b6b45"
+    },
+    {
+     "id": "t7",
+     "label": "Worktop fit",
+     "start": "2026-09-11",
+     "end": "2026-09-12",
+     "progress": 0.0,
+     "dependsOn": [
+      "t6"
+     ],
+     "group": "Fit-out",
+     "color": "#3b6b45"
+    },
+    {
+     "id": "t8",
+     "label": "Painting",
+     "start": "2026-09-10",
+     "end": "2026-09-12",
+     "progress": 0.0,
+     "dependsOn": [
+      "t4"
+     ],
+     "group": "Fit-out",
+     "color": "#3b6b45"
+    },
+    {
+     "id": "t9",
+     "label": "Snagging and handover",
+     "start": "2026-09-12",
+     "end": "2026-09-14",
+     "progress": 0.0,
+     "dependsOn": [
+      "t7",
+      "t8"
+     ],
+     "group": "Close",
+     "color": "#4f3d2e"
+    }
+   ],
+   "events": [
+    {
+     "date": "2026-09-02",
+     "title": "Skip 1",
+     "color": "#8c6b52"
+    },
+    {
+     "date": "2026-09-05",
+     "title": "Tile delivery",
+     "color": "#5b7fa6"
+    },
+    {
+     "date": "2026-09-07",
+     "title": "Carcasses delivered",
+     "color": "#3b6b45"
+    },
+    {
+     "date": "2026-09-09",
+     "title": "Stone templating",
+     "color": "#3b6b45"
+    },
+    {
+     "date": "2026-09-11",
+     "title": "Worktop delivery",
+     "color": "#3b6b45"
+    },
+    {
+     "date": "2026-09-12",
+     "title": "Client walk-through",
+     "color": "#4f3d2e"
+    },
+    {
+     "date": "2026-09-14",
+     "title": "Handover",
+     "color": "#4f3d2e"
+    }
+   ],
+   "selectedDate": "2026-09-12",
+   "board": [
+    {
+     "key": "todo",
+     "title": "To do",
+     "items": [
+      {
+       "id": "c1",
+       "title": "Order splashback glass",
+       "trade": "Glazing"
+      },
+      {
+       "id": "c2",
+       "title": "Confirm tap finish",
+       "trade": "Plumbing"
+      },
+      {
+       "id": "c3",
+       "title": "Book stone templating",
+       "trade": "Stone"
+      }
+     ]
+    },
+    {
+     "key": "doing",
+     "title": "In progress",
+     "items": [
+      {
+       "id": "c4",
+       "title": "Tile wall behind hob",
+       "trade": "Tiling"
+      },
+      {
+       "id": "c5",
+       "title": "Second-fix sockets",
+       "trade": "Electrical"
+      }
+     ]
+    },
+    {
+     "key": "done",
+     "title": "Done",
+     "items": [
+      {
+       "id": "c6",
+       "title": "Strip old units",
+       "trade": "Demolition"
+      },
+      {
+       "id": "c7",
+       "title": "Rough-in waste",
+       "trade": "Plumbing"
+      }
+     ]
+    }
+   ],
+   "rooms": [
+    {
+     "id": "kitchen",
+     "label": "Kitchen",
+     "children": [
+      {
+       "id": "k-wall",
+       "label": "Hob wall",
+       "children": [
+        {
+         "id": "k-wall-tile",
+         "label": "Tiling 6.5 m²"
+        },
+        {
+         "id": "k-wall-hood",
+         "label": "Extractor hood"
+        }
+       ]
+      },
+      {
+       "id": "k-run",
+       "label": "Cabinet run",
+       "children": [
+        {
+         "id": "k-run-carc",
+         "label": "Carcasses ×12"
+        },
+        {
+         "id": "k-run-top",
+         "label": "Quartz worktop 4.2 m"
+        },
+        {
+         "id": "k-run-sink",
+         "label": "Sink and tap"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "utility",
+     "label": "Utility",
+     "children": [
+      {
+       "id": "u-paint",
+       "label": "Painting"
+      },
+      {
+       "id": "u-waste",
+       "label": "Waste removal"
+      }
+     ]
+    }
+   ],
+   "planPick": "Tap a bar, a day, a card or a node to pin it here",
+   "planMove": "Nothing moved yet — drag a card between columns, or long-press a node onto another"
+  }
+ },
+ "content": {
+  "type": "container",
+  "decoration": {
+   "color": "{{theme.color.surfaceContainerHighest}}"
+  },
+  "child": {
+   "type": "linear",
+   "direction": "vertical",
+   "children": [
+    {
+     "type": "container",
+     "padding": {
+      "left": 24,
+      "right": 24,
+      "top": 20,
+      "bottom": 16
+     },
+     "decoration": {
+      "color": "{{theme.color.surface}}",
+      "border": {
+       "bottom": true,
+       "color": "{{theme.color.outline}}",
+       "width": 1
+      }
+     },
+     "child": {
+      "type": "linear",
+      "direction": "horizontal",
+      "crossAxisAlignment": "center",
+      "children": [
+       {
+        "type": "linear",
+        "direction": "vertical",
+        "children": [
+         {
+          "type": "text",
+          "content": "{{job}}",
+          "style": {
+           "fontSize": 12,
+           "letterSpacing": 2.2,
+           "color": "{{theme.color.onSurfaceVariant}}"
+          }
+         },
+         {
+          "type": "text",
+          "content": "Programme",
+          "style": {
+           "fontSize": 21,
+           "fontWeight": "bold",
+           "color": "{{theme.color.onSurface}}"
+          }
+         }
+        ]
+       },
+       {
+        "type": "expanded",
+        "child": {
+         "type": "box",
+         "height": 1
+        }
+       },
+       {
+        "type": "linear",
+        "direction": "vertical",
+        "crossAxisAlignment": "end",
+        "children": [
+         {
+          "type": "text",
+          "content": "{{lead}}",
+          "style": {
+           "fontSize": 13,
+           "color": "{{theme.color.onSurface}}"
+          }
+         },
+         {
+          "type": "text",
+          "content": "{{closes}}",
+          "style": {
+           "fontSize": 12,
+           "color": "{{theme.color.onSurfaceVariant}}"
+          }
+         }
+        ]
+       },
+       {
+        "type": "box",
+        "width": 20
+       },
+       {
+        "type": "button",
+        "label": "← Closing sheet",
+        "variant": "outlined",
+        "onTap": {
+         "type": "navigation",
+         "action": "push",
+         "route": "/sheet"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "type": "container",
+     "height": 330,
+     "padding": {
+      "left": 20,
+      "right": 20,
+      "top": 18
+     },
+     "child": {
+      "type": "container",
+      "padding": {
+       "all": 16
+      },
+      "decoration": {
+       "color": "{{theme.color.surface}}",
+       "borderRadius": 12,
+       "border": {
+        "color": "{{theme.color.outline}}",
+        "width": 1
+       }
+      },
+      "child": {
+       "type": "linear",
+       "direction": "vertical",
+       "children": [
+        {
+         "type": "text",
+         "content": "PROGRAMME · 1–14 SEPT · bars by group, arrows are dependencies",
+         "style": {
+          "fontSize": 11,
+          "letterSpacing": 1.8,
+          "color": "{{theme.color.onSurfaceVariant}}"
+         }
+        },
+        {
+         "type": "box",
+         "height": 8
+        },
+        {
+         "type": "expanded",
+         "child": {
+          "type": "gantt",
+          "tasks": "{{tasks}}",
+          "viewMode": "day",
+          "range": {
+           "start": "2026-09-01",
+           "end": "2026-09-15"
+          },
+          "todayMarker": false,
+          "showProgress": true,
+          "showDependencies": true,
+          "rowHeight": 20,
+          "onTaskClick": {
+           "type": "state",
+           "action": "set",
+           "binding": "planPick",
+           "value": "Task {{event.id}} selected"
+          }
+         }
+        }
+       ]
+      }
+     }
+    },
+    {
+     "type": "container",
+     "height": 350,
+     "padding": {
+      "left": 20,
+      "right": 20,
+      "top": 16
+     },
+     "child": {
+      "type": "linear",
+      "direction": "horizontal",
+      "crossAxisAlignment": "stretch",
+      "children": [
+       {
+        "type": "expanded",
+        "flex": 4,
+        "child": {
+         "type": "container",
+         "padding": {
+          "all": 16
+         },
+         "decoration": {
+          "color": "{{theme.color.surface}}",
+          "borderRadius": 12,
+          "border": {
+           "color": "{{theme.color.outline}}",
+           "width": 1
+          }
+         },
+         "child": {
+          "type": "linear",
+          "direction": "vertical",
+          "children": [
+           {
+            "type": "text",
+            "content": "SITE CALENDAR · deliveries and visits",
+            "style": {
+             "fontSize": 11,
+             "letterSpacing": 1.8,
+             "color": "{{theme.color.onSurfaceVariant}}"
+            }
+           },
+           {
+            "type": "box",
+            "height": 6
+           },
+           {
+            "type": "calendar",
+            "view": "month",
+            "selectedDate": "{{selectedDate}}",
+            "events": "{{events}}",
+            "firstDate": "2026-09-01",
+            "lastDate": "2026-09-30",
+            "height": 250,
+            "showHeader": true,
+            "onChange": {
+             "type": "batch",
+             "actions": [
+              {
+               "type": "state",
+               "action": "set",
+               "binding": "selectedDate",
+               "value": "{{event.value}}"
+              },
+              {
+               "type": "state",
+               "action": "set",
+               "binding": "planPick",
+               "value": "Day {{event.value}} selected"
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       },
+       {
+        "type": "box",
+        "width": 16
+       },
+       {
+        "type": "expanded",
+        "flex": 5,
+        "child": {
+         "type": "container",
+         "padding": {
+          "all": 16
+         },
+         "decoration": {
+          "color": "{{theme.color.surface}}",
+          "borderRadius": 12,
+          "border": {
+           "color": "{{theme.color.outline}}",
+           "width": 1
+          }
+         },
+         "child": {
+          "type": "linear",
+          "direction": "vertical",
+          "children": [
+           {
+            "type": "text",
+            "content": "BOARD · drag a card; the move is reported, then applied",
+            "style": {
+             "fontSize": 11,
+             "letterSpacing": 1.8,
+             "color": "{{theme.color.onSurfaceVariant}}"
+            }
+           },
+           {
+            "type": "box",
+            "height": 6
+           },
+           {
+            "type": "expanded",
+            "child": {
+             "type": "kanban",
+             "columns": "{{board}}",
+             "itemKey": "id",
+             "optimistic": true,
+             "itemTemplate": {
+              "type": "container",
+              "padding": {
+               "all": 10
+              },
+              "margin": {
+               "bottom": 6
+              },
+              "decoration": {
+               "color": "{{theme.color.surfaceVariant}}",
+               "borderRadius": 8
+              },
+              "child": {
+               "type": "linear",
+               "direction": "vertical",
+               "children": [
+                {
+                 "type": "text",
+                 "content": "{{item.title}}",
+                 "style": {
+                  "fontSize": 13,
+                  "fontWeight": "bold",
+                  "color": "{{theme.color.onSurface}}"
+                 }
+                },
+                {
+                 "type": "text",
+                 "content": "{{item.trade}}",
+                 "style": {
+                  "fontSize": 11,
+                  "color": "{{theme.color.onSurfaceVariant}}"
+                 }
+                }
+               ]
+              }
+             },
+             "onCardMove": {
+              "type": "state",
+              "action": "set",
+              "binding": "planMove",
+              "value": "{{event.item.title}}: {{event.from.column}} #{{event.from.index}} → {{event.to.column}} #{{event.to.index}}"
+             },
+             "onCardClick": {
+              "type": "state",
+              "action": "set",
+              "binding": "planPick",
+              "value": "Card {{event.item.title}} selected"
+             },
+             "columnWidth": 150
+            }
+           }
+          ]
+         }
+        }
+       },
+       {
+        "type": "box",
+        "width": 16
+       },
+       {
+        "type": "expanded",
+        "flex": 3,
+        "child": {
+         "type": "container",
+         "padding": {
+          "all": 16
+         },
+         "decoration": {
+          "color": "{{theme.color.surface}}",
+          "borderRadius": 12,
+          "border": {
+           "color": "{{theme.color.outline}}",
+           "width": 1
+          }
+         },
+         "child": {
+          "type": "linear",
+          "direction": "vertical",
+          "children": [
+           {
+            "type": "text",
+            "content": "ROOMS · long-press a node and drop it before / inside / after",
+            "style": {
+             "fontSize": 11,
+             "letterSpacing": 1.8,
+             "color": "{{theme.color.onSurfaceVariant}}"
+            }
+           },
+           {
+            "type": "box",
+            "height": 6
+           },
+           {
+            "type": "expanded",
+            "child": {
+             "type": "tree",
+             "data": "{{rooms}}",
+             "initiallyExpanded": true,
+             "selectable": true,
+             "draggable": true,
+             "showLines": true,
+             "onNodeTap": {
+              "type": "state",
+              "action": "set",
+              "binding": "planPick",
+              "value": "Node {{event.id}} selected"
+             },
+             "onDrop": {
+              "type": "state",
+              "action": "set",
+              "binding": "planMove",
+              "value": "{{event.item.label}} dropped {{event.position}} {{event.target.label}}"
+             },
+             "itemPadding": {
+              "vertical": 2,
+              "right": 8
+             }
+            }
+           }
+          ]
+         }
+        }
+       }
+      ]
+     }
+    },
+    {
+     "type": "container",
+     "padding": {
+      "left": 24,
+      "right": 24,
+      "top": 14,
+      "bottom": 16
+     },
+     "decoration": {
+      "color": "{{theme.color.surface}}",
+      "border": {
+       "top": true,
+       "color": "{{theme.color.outline}}",
+       "width": 1
+      }
+     },
+     "child": {
+      "type": "linear",
+      "direction": "horizontal",
+      "crossAxisAlignment": "center",
+      "children": [
+       {
+        "type": "expanded",
+        "child": {
+         "type": "text",
+         "content": "{{planPick}}",
+         "style": {
+          "fontSize": 13,
+          "color": "{{theme.color.onSurfaceVariant}}"
+         }
+        }
+       },
+       {
+        "type": "box",
+        "width": 16
+       },
+       {
+        "type": "text",
+        "content": "{{planMove}}",
+        "style": {
+         "fontSize": 13,
+         "color": "{{theme.color.onSurface}}"
+        }
+       }
+      ]
+     }
+    }
+   ]
+  }
+ }
+}

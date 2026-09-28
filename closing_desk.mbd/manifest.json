@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "manifest": {
+    "id": "com.makemind.sample.closing_desk",
+    "name": "Closing Desk",
+    "version": "1.0.0",
+    "schemaVersion": "1.0.0",
+    "type": "application",
+    "entryPoint": "ui.app",
+    "description": "What an interior contractor's office sees when a job closes: the settlement sheet with editable lines and a formula strip beside it, and the programme with the plan, the calendar, the board and the room tree. Every edit is reported to the document; no widget rewrites the data on its own.",
+    "provider": "MakeMind",
+    "license": "MIT",
+    "category": "business",
+    "tags": ["construction", "settlement", "schedule", "sample"],
+    "publisher": { "name": "makemind.dev", "email": "dev@makemind.dev" }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "application",
+  "title": "Closing Desk",
+  "version": "1.4",
+  "initialRoute": "/sheet",
+  "routes": { "/sheet": "ui://pages/sheet", "/plan": "ui://pages/plan" },
+  "theme": {
+    "mode": "light",
+    "color": {
+      "primary": "#4f3d2e", "onPrimary": "#ffffff",
+      "primaryContainer": "#ebe1d6", "onPrimaryContainer": "#2a1f16",
+      "secondary": "#6b7a6e", "onSecondary": "#ffffff",
+      "surface": "#ffffff", "onSurface": "#1d1a17",
+      "surfaceVariant": "#efeae4", "surfaceContainerHighest": "#f3efe9",
+      "onSurfaceVariant": "#6f665e",
+      "outline": "#dcd4ca", "outlineVariant": "#e9e2d9",
+      "error": "#a63d2f", "onError": "#ffffff",
+      "warning": "#9a6b12", "onWarning": "#ffffff",
+      "success": "#3b6b45",
+      "inverseSurface": "#1d1a17", "inverseOnSurface": "#f3efe9"
+    },
+    "spacing": { "xxs": 2, "xs": 4, "sm": 8, "md": 16, "lg": 24, "xl": 32, "2xl": 48 },
+    "shape": { "none": 0, "extraSmall": 4, "small": 8, "medium": 12, "large": 16, "extraLarge": 28, "full": 999 }
+  }
+}

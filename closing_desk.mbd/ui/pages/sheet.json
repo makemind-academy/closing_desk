@@ -1,556 +1,981 @@
 {
- "type": "page",
- "metadata": {
-  "title": "Closing sheet"
- },
- "state": {
-  "initial": {
-   "job": "JOB 2026-114 · APT 1204 KITCHEN REFIT",
-   "lead": "Site lead M. Shaw",
-   "closes": "closes 2026-09-12",
-   "lines": [
-    {
-     "item": "Strip-out and disposal",
-     "trade": "Demolition",
-     "qty": 1,
-     "unit": "lot",
-     "rate": 850,
-     "amount": 850
-    },
-    {
-     "item": "Cabinet carcasses",
-     "trade": "Joinery",
-     "qty": 12,
-     "unit": "ea",
-     "rate": 180,
-     "amount": 2160
-    },
-    {
-     "item": "Quartz worktop",
-     "trade": "Stone",
-     "qty": 4.2,
-     "unit": "m",
-     "rate": 310,
-     "amount": 1302
-    },
-    {
-     "item": "Sink and tap set",
-     "trade": "Plumbing",
-     "qty": 1,
-     "unit": "set",
-     "rate": 420,
-     "amount": 420
-    },
-    {
-     "item": "Wall tiling",
-     "trade": "Tiling",
-     "qty": 6.5,
-     "unit": "m²",
-     "rate": 95,
-     "amount": 617.5
-    },
-    {
-     "item": "Socket and switch points",
-     "trade": "Electrical",
-     "qty": 9,
-     "unit": "ea",
-     "rate": 45,
-     "amount": 405
-    },
-    {
-     "item": "Walls and ceiling",
-     "trade": "Painting",
-     "qty": 1,
-     "unit": "lot",
-     "rate": 380,
-     "amount": 380
-    },
-    {
-     "item": "Skip hire",
-     "trade": "Demolition",
-     "qty": 2,
-     "unit": "trip",
-     "rate": 120,
-     "amount": 240
-    }
-   ],
-   "sortColumn": "trade",
-   "sortAscending": true,
-   "pick": "Tap a line to pin it here",
-   "lastEdit": "No edits yet — tap a quantity or rate, type a new value and press Enter",
-   "edits": [],
-   "contractSum": 6374.5,
-   "variations": 185,
-   "retention": 0.05,
-   "deposit": 2000,
-   "settlement": [
-    [
-     "Contract sum",
-     {
-      "value": 0,
-      "formula": "contractSum"
-     }
-    ],
-    [
-     "Variations",
-     {
-      "value": 0,
-      "formula": "variations"
-     }
-    ],
-    [
-     "Subtotal",
-     {
-      "value": 0,
-      "formula": "contractSum + variations"
-     }
-    ],
-    [
-     "Retention 5%",
-     {
-      "value": 0,
-      "formula": "round((contractSum + variations) * retention, 2)"
-     }
-    ],
-    [
-     "Deposit paid",
-     {
-      "value": 0,
-      "formula": "deposit"
-     }
-    ],
-    [
-     "Balance due",
-     {
-      "value": 0,
-      "formula": "contractSum + variations - round((contractSum + variations) * retention, 2) - deposit"
-     }
-    ]
-   ]
-  }
- },
- "content": {
-  "type": "container",
-  "decoration": {
-   "color": "{{theme.color.surfaceContainerHighest}}"
+  "type": "page",
+  "metadata": {
+    "title": "Closing sheet"
   },
-  "child": {
-   "type": "linear",
-   "direction": "vertical",
-   "children": [
-    {
-     "type": "container",
-     "padding": {
-      "left": 24,
-      "right": 24,
-      "top": 20,
-      "bottom": 16
-     },
-     "decoration": {
-      "color": "{{theme.color.surface}}",
-      "border": {
-       "bottom": true,
-       "color": "{{theme.color.outline}}",
-       "width": 1
-      }
-     },
-     "child": {
-      "type": "linear",
-      "direction": "horizontal",
-      "crossAxisAlignment": "center",
-      "children": [
-       {
-        "type": "linear",
-        "direction": "vertical",
-        "children": [
-         {
-          "type": "text",
-          "content": "{{job}}",
-          "style": {
-           "fontSize": 12,
-           "letterSpacing": 2.2,
-           "color": "{{theme.color.onSurfaceVariant}}"
+  "state": {
+    "initial": {
+      "job": "JOB 2026-114 · APT 1204 KITCHEN REFIT",
+      "lead": "Site lead M. Shaw",
+      "closes": "closes 2026-09-12",
+      "lines": [
+        {
+          "item": "Strip-out and disposal",
+          "trade": "Demolition",
+          "qty": 1,
+          "unit": "lot",
+          "rate": 850,
+          "amount": 850
+        },
+        {
+          "item": "Cabinet carcasses",
+          "trade": "Joinery",
+          "qty": 12,
+          "unit": "ea",
+          "rate": 180,
+          "amount": 2160
+        },
+        {
+          "item": "Quartz worktop",
+          "trade": "Stone",
+          "qty": 4.2,
+          "unit": "m",
+          "rate": 310,
+          "amount": 1302
+        },
+        {
+          "item": "Sink and tap set",
+          "trade": "Plumbing",
+          "qty": 1,
+          "unit": "set",
+          "rate": 420,
+          "amount": 420
+        },
+        {
+          "item": "Wall tiling",
+          "trade": "Tiling",
+          "qty": 6.5,
+          "unit": "m²",
+          "rate": 95,
+          "amount": 617.5
+        },
+        {
+          "item": "Socket and switch points",
+          "trade": "Electrical",
+          "qty": 9,
+          "unit": "ea",
+          "rate": 45,
+          "amount": 405
+        },
+        {
+          "item": "Walls and ceiling",
+          "trade": "Painting",
+          "qty": 1,
+          "unit": "lot",
+          "rate": 380,
+          "amount": 380
+        },
+        {
+          "item": "Skip hire",
+          "trade": "Demolition",
+          "qty": 2,
+          "unit": "trip",
+          "rate": 120,
+          "amount": 240
+        }
+      ],
+      "sortColumn": "trade",
+      "sortAscending": true,
+      "pick": "Tap a line to pin it here",
+      "lastEdit": "No edits yet — tap a quantity or rate, type a new value and press Enter",
+      "edits": [],
+      "contractSum": 6374.5,
+      "variations": 185,
+      "retention": 0.05,
+      "deposit": 2000,
+      "settlement": [
+        [
+          "Contract sum",
+          {
+            "value": 0,
+            "formula": "contractSum"
           }
-         },
-         {
-          "type": "text",
-          "content": "Closing sheet",
-          "style": {
-           "fontSize": 21,
-           "fontWeight": "bold",
-           "color": "{{theme.color.onSurface}}"
+        ],
+        [
+          "Variations",
+          {
+            "value": 0,
+            "formula": "variations"
           }
-         }
+        ],
+        [
+          "Subtotal",
+          {
+            "value": 0,
+            "formula": "contractSum + variations"
+          }
+        ],
+        [
+          "Retention 5%",
+          {
+            "value": 0,
+            "formula": "round((contractSum + variations) * retention, 2)"
+          }
+        ],
+        [
+          "Deposit paid",
+          {
+            "value": 0,
+            "formula": "deposit"
+          }
+        ],
+        [
+          "Balance due",
+          {
+            "value": 0,
+            "formula": "contractSum + variations - round((contractSum + variations) * retention, 2) - deposit"
+          }
         ]
-       },
-       {
-        "type": "expanded",
-        "child": {
-         "type": "box",
-         "height": 1
-        }
-       },
-       {
-        "type": "linear",
-        "direction": "vertical",
-        "crossAxisAlignment": "end",
-        "children": [
-         {
-          "type": "text",
-          "content": "{{lead}}",
-          "style": {
-           "fontSize": 13,
-           "color": "{{theme.color.onSurface}}"
-          }
-         },
-         {
-          "type": "text",
-          "content": "{{closes}}",
-          "style": {
-           "fontSize": 12,
-           "color": "{{theme.color.onSurfaceVariant}}"
-          }
-         }
-        ]
-       },
-       {
-        "type": "box",
-        "width": 20
-       },
-       {
-        "type": "button",
-        "label": "Programme →",
-        "variant": "outlined",
-        "onTap": {
-         "type": "navigation",
-         "action": "push",
-         "route": "/plan"
-        }
-       }
       ]
-     }
-    },
-    {
-     "type": "container",
-     "height": 600,
-     "padding": {
-      "left": 20,
-      "right": 20,
-      "top": 18
-     },
-     "child": {
-      "type": "linear",
-      "direction": "horizontal",
-      "crossAxisAlignment": "stretch",
-      "children": [
-       {
-        "type": "expanded",
-        "flex": 5,
-        "child": {
-         "type": "container",
-         "padding": {
-          "all": 16
-         },
-         "decoration": {
-          "color": "{{theme.color.surface}}",
-          "borderRadius": 12,
-          "border": {
-           "color": "{{theme.color.outline}}",
-           "width": 1
-          }
-         },
-         "child": {
-          "type": "linear",
-          "direction": "vertical",
-          "children": [
-           {
-            "type": "text",
-            "content": "LINES · tap a header to sort · tap a qty or rate, type, press Enter",
-            "style": {
-             "fontSize": 11,
-             "letterSpacing": 1.8,
-             "color": "{{theme.color.onSurfaceVariant}}"
-            }
-           },
-           {
-            "type": "box",
-            "height": 8
-           },
-           {
-            "type": "dataTable",
-            "columns": [
-             {
-              "key": "item",
-              "label": "Item",
-              "sortable": true,
-              "width": 230
-             },
-             {
-              "key": "trade",
-              "label": "Trade",
-              "sortable": true,
-              "width": 120
-             },
-             {
-              "key": "qty",
-              "label": "Qty",
-              "align": "end",
-              "width": 70
-             },
-             {
-              "key": "unit",
-              "label": "Unit",
-              "width": 70
-             },
-             {
-              "key": "rate",
-              "label": "Rate ($)",
-              "align": "end",
-              "width": 120
-             },
-             {
-              "key": "amount",
-              "label": "Amount ($)",
-              "align": "end",
-              "sortable": true,
-              "width": 140
-             }
-            ],
-            "rows": "{{lines}}",
-            "editable": true,
-            "sortColumn": "{{sortColumn}}",
-            "sortAscending": "{{sortAscending}}",
-            "onSort": {
-             "type": "batch",
-             "actions": [
-              {
-               "type": "state",
-               "action": "set",
-               "binding": "sortColumn",
-               "value": "{{event.column}}"
-              },
-              {
-               "type": "state",
-               "action": "set",
-               "binding": "sortAscending",
-               "value": "{{event.ascending}}"
-              }
-             ]
-            },
-            "onRowTap": {
-             "type": "state",
-             "action": "set",
-             "binding": "pick",
-             "value": "{{event.row.item}} · {{event.row.trade}} · {{event.row.qty}} {{event.row.unit}} × {{event.row.rate}} = {{event.row.amount}} $"
-            },
-            "onCellEdit": {
-             "type": "batch",
-             "actions": [
-              {
-               "type": "state",
-               "action": "set",
-               "binding": "lastEdit",
-               "value": "{{event.row.item}} · {{event.column}}: {{event.previous}} → {{event.value}}"
-              },
-              {
-               "type": "state",
-               "action": "append",
-               "binding": "edits",
-               "value": {
-                "item": "{{event.row.item}}",
-                "column": "{{event.column}}",
-                "from": "{{event.previous}}",
-                "to": "{{event.value}}"
-               }
-              }
-             ]
-            }
-           },
-           {
-            "type": "box",
-            "height": 10
-           },
-           {
-            "type": "text",
-            "content": "{{pick}}",
-            "style": {
-             "fontSize": 13,
-             "color": "{{theme.color.onSurface}}"
-            }
-           }
-          ]
-         }
-        }
-       },
-       {
-        "type": "box",
-        "width": 16
-       },
-       {
-        "type": "expanded",
-        "flex": 2,
-        "child": {
-         "type": "container",
-         "padding": {
-          "all": 16
-         },
-         "decoration": {
-          "color": "{{theme.color.surface}}",
-          "borderRadius": 12,
-          "border": {
-           "color": "{{theme.color.outline}}",
-           "width": 1
-          }
-         },
-         "child": {
-          "type": "linear",
-          "direction": "vertical",
-          "children": [
-           {
-            "type": "text",
-            "content": "SETTLEMENT · formulas read the state on the left",
-            "style": {
-             "fontSize": 11,
-             "letterSpacing": 1.8,
-             "color": "{{theme.color.onSurfaceVariant}}"
-            }
-           },
-           {
-            "type": "box",
-            "height": 8
-           },
-           {
-            "type": "spreadsheet",
-            "data": "{{settlement}}",
-            "columns": [
-             {
-              "label": "Line",
-              "readOnly": true
-             },
-             {
-              "label": "$"
-             }
-            ],
-            "formulas": true,
-            "editable": true,
-            "rowHeaders": false,
-            "onChange": {
-             "type": "state",
-             "action": "set",
-             "binding": "lastEdit",
-             "value": "sheet {{event.row}},{{event.column}}: {{event.previous}} → {{event.value}}"
-            }
-           },
-           {
-            "type": "box",
-            "height": 14
-           },
-           {
-            "type": "text",
-            "content": "INPUTS",
-            "style": {
-             "fontSize": 11,
-             "letterSpacing": 1.8,
-             "color": "{{theme.color.onSurfaceVariant}}"
-            }
-           },
-           {
-            "type": "box",
-            "height": 6
-           },
-           {
-            "type": "text",
-            "content": "contractSum {{contractSum}} · variations {{variations}} · retention {{retention}} · deposit {{deposit}}",
-            "style": {
-             "fontSize": 12,
-             "color": "{{theme.color.onSurfaceVariant}}"
-            }
-           },
-           {
-            "type": "box",
-            "height": 14
-           },
-           {
-            "type": "text",
-            "content": "EDITS REPORTED · {{edits.length}}",
-            "style": {
-             "fontSize": 11,
-             "letterSpacing": 1.8,
-             "color": "{{theme.color.onSurfaceVariant}}"
-            }
-           },
-           {
-            "type": "box",
-            "height": 6
-           },
-           {
-            "type": "list",
-            "items": "{{edits}}",
-            "shrinkWrap": true,
-            "itemTemplate": {
-             "type": "text",
-             "content": "{{item.item}} · {{item.column}} {{item.from}} → {{item.to}}",
-             "style": {
-              "fontSize": 12,
-              "color": "{{theme.color.onSurface}}"
-             }
-            }
-           }
-          ]
-         }
-        }
-       }
-      ]
-     }
-    },
-    {
-     "type": "container",
-     "padding": {
-      "left": 24,
-      "right": 24,
-      "top": 14,
-      "bottom": 16
-     },
-     "decoration": {
-      "color": "{{theme.color.surface}}",
-      "border": {
-       "top": true,
-       "color": "{{theme.color.outline}}",
-       "width": 1
-      }
-     },
-     "child": {
-      "type": "linear",
-      "direction": "horizontal",
-      "crossAxisAlignment": "center",
-      "children": [
-       {
-        "type": "expanded",
-        "child": {
-         "type": "text",
-         "content": "A widget reports an edit; the document decides what it means. Nothing on this screen rewrites its own rows.",
-         "style": {
-          "fontSize": 13,
-          "color": "{{theme.color.onSurfaceVariant}}"
-         }
-        }
-       },
-       {
-        "type": "box",
-        "width": 16
-       },
-       {
-        "type": "text",
-        "content": "{{lastEdit}}",
-        "style": {
-         "fontSize": 13,
-         "color": "{{theme.color.onSurface}}"
-        }
-       }
-      ]
-     }
     }
-   ]
+  },
+  "content": {
+    "type": "mediaQuery",
+    "condition": {
+      "minWidth": 1100
+    },
+    "then": {
+      "type": "container",
+      "decoration": {
+        "color": "{{theme.color.surfaceContainerHighest}}"
+      },
+      "child": {
+        "type": "linear",
+        "direction": "vertical",
+        "children": [
+          {
+            "type": "container",
+            "padding": {
+              "left": 24,
+              "right": 24,
+              "top": 20,
+              "bottom": 16
+            },
+            "decoration": {
+              "color": "{{theme.color.surface}}",
+              "border": {
+                "bottom": true,
+                "color": "{{theme.color.outline}}",
+                "width": 1
+              }
+            },
+            "child": {
+              "type": "linear",
+              "direction": "horizontal",
+              "crossAxisAlignment": "center",
+              "children": [
+                {
+                  "type": "linear",
+                  "direction": "vertical",
+                  "children": [
+                    {
+                      "type": "text",
+                      "content": "{{job}}",
+                      "style": {
+                        "fontSize": 12,
+                        "letterSpacing": 2.2,
+                        "color": "{{theme.color.onSurfaceVariant}}"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "content": "Closing sheet",
+                      "style": {
+                        "fontSize": 21,
+                        "fontWeight": "bold",
+                        "color": "{{theme.color.onSurface}}"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "expanded",
+                  "child": {
+                    "type": "box",
+                    "height": 1
+                  }
+                },
+                {
+                  "type": "linear",
+                  "direction": "vertical",
+                  "crossAxisAlignment": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "content": "{{lead}}",
+                      "style": {
+                        "fontSize": 13,
+                        "color": "{{theme.color.onSurface}}"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "content": "{{closes}}",
+                      "style": {
+                        "fontSize": 12,
+                        "color": "{{theme.color.onSurfaceVariant}}"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "width": 20
+                },
+                {
+                  "type": "button",
+                  "label": "Programme →",
+                  "variant": "outlined",
+                  "onTap": {
+                    "type": "navigation",
+                    "action": "push",
+                    "route": "/plan"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "container",
+            "height": 600,
+            "padding": {
+              "left": 20,
+              "right": 20,
+              "top": 18
+            },
+            "child": {
+              "type": "linear",
+              "direction": "horizontal",
+              "crossAxisAlignment": "stretch",
+              "children": [
+                {
+                  "type": "expanded",
+                  "flex": 5,
+                  "child": {
+                    "type": "container",
+                    "padding": {
+                      "all": 16
+                    },
+                    "decoration": {
+                      "color": "{{theme.color.surface}}",
+                      "borderRadius": 12,
+                      "border": {
+                        "color": "{{theme.color.outline}}",
+                        "width": 1
+                      }
+                    },
+                    "child": {
+                      "type": "linear",
+                      "direction": "vertical",
+                      "children": [
+                        {
+                          "type": "text",
+                          "content": "LINES · tap a header to sort · tap a qty or rate, type, press Enter",
+                          "style": {
+                            "fontSize": 11,
+                            "letterSpacing": 1.8,
+                            "color": "{{theme.color.onSurfaceVariant}}"
+                          }
+                        },
+                        {
+                          "type": "box",
+                          "height": 8
+                        },
+                        {
+                          "type": "dataTable",
+                          "columns": [
+                            {
+                              "key": "item",
+                              "label": "Item",
+                              "sortable": true,
+                              "width": 230
+                            },
+                            {
+                              "key": "trade",
+                              "label": "Trade",
+                              "sortable": true,
+                              "width": 120
+                            },
+                            {
+                              "key": "qty",
+                              "label": "Qty",
+                              "align": "end",
+                              "width": 70
+                            },
+                            {
+                              "key": "unit",
+                              "label": "Unit",
+                              "width": 70
+                            },
+                            {
+                              "key": "rate",
+                              "label": "Rate ($)",
+                              "align": "end",
+                              "width": 120
+                            },
+                            {
+                              "key": "amount",
+                              "label": "Amount ($)",
+                              "align": "end",
+                              "sortable": true,
+                              "width": 140
+                            }
+                          ],
+                          "rows": "{{lines}}",
+                          "editable": true,
+                          "sortColumn": "{{sortColumn}}",
+                          "sortAscending": "{{sortAscending}}",
+                          "onSort": {
+                            "type": "batch",
+                            "actions": [
+                              {
+                                "type": "state",
+                                "action": "set",
+                                "binding": "sortColumn",
+                                "value": "{{event.column}}"
+                              },
+                              {
+                                "type": "state",
+                                "action": "set",
+                                "binding": "sortAscending",
+                                "value": "{{event.ascending}}"
+                              }
+                            ]
+                          },
+                          "onRowTap": {
+                            "type": "state",
+                            "action": "set",
+                            "binding": "pick",
+                            "value": "{{event.row.item}} · {{event.row.trade}} · {{event.row.qty}} {{event.row.unit}} × {{event.row.rate}} = {{event.row.amount}} $"
+                          },
+                          "onCellEdit": {
+                            "type": "batch",
+                            "actions": [
+                              {
+                                "type": "state",
+                                "action": "set",
+                                "binding": "lastEdit",
+                                "value": "{{event.row.item}} · {{event.column}}: {{event.previous}} → {{event.value}}"
+                              },
+                              {
+                                "type": "state",
+                                "action": "append",
+                                "binding": "edits",
+                                "value": {
+                                  "item": "{{event.row.item}}",
+                                  "column": "{{event.column}}",
+                                  "from": "{{event.previous}}",
+                                  "to": "{{event.value}}"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "box",
+                          "height": 10
+                        },
+                        {
+                          "type": "text",
+                          "content": "{{pick}}",
+                          "style": {
+                            "fontSize": 13,
+                            "color": "{{theme.color.onSurface}}"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "box",
+                  "width": 16
+                },
+                {
+                  "type": "expanded",
+                  "flex": 2,
+                  "child": {
+                    "type": "container",
+                    "padding": {
+                      "all": 16
+                    },
+                    "decoration": {
+                      "color": "{{theme.color.surface}}",
+                      "borderRadius": 12,
+                      "border": {
+                        "color": "{{theme.color.outline}}",
+                        "width": 1
+                      }
+                    },
+                    "child": {
+                      "type": "linear",
+                      "direction": "vertical",
+                      "children": [
+                        {
+                          "type": "text",
+                          "content": "SETTLEMENT · formulas read the state on the left",
+                          "style": {
+                            "fontSize": 11,
+                            "letterSpacing": 1.8,
+                            "color": "{{theme.color.onSurfaceVariant}}"
+                          }
+                        },
+                        {
+                          "type": "box",
+                          "height": 8
+                        },
+                        {
+                          "type": "spreadsheet",
+                          "data": "{{settlement}}",
+                          "columns": [
+                            {
+                              "label": "Line",
+                              "readOnly": true
+                            },
+                            {
+                              "label": "$"
+                            }
+                          ],
+                          "formulas": true,
+                          "editable": true,
+                          "rowHeaders": false,
+                          "onChange": {
+                            "type": "state",
+                            "action": "set",
+                            "binding": "lastEdit",
+                            "value": "sheet {{event.row}},{{event.column}}: {{event.previous}} → {{event.value}}"
+                          }
+                        },
+                        {
+                          "type": "box",
+                          "height": 14
+                        },
+                        {
+                          "type": "text",
+                          "content": "INPUTS",
+                          "style": {
+                            "fontSize": 11,
+                            "letterSpacing": 1.8,
+                            "color": "{{theme.color.onSurfaceVariant}}"
+                          }
+                        },
+                        {
+                          "type": "box",
+                          "height": 6
+                        },
+                        {
+                          "type": "text",
+                          "content": "contractSum {{contractSum}} · variations {{variations}} · retention {{retention}} · deposit {{deposit}}",
+                          "style": {
+                            "fontSize": 12,
+                            "color": "{{theme.color.onSurfaceVariant}}"
+                          }
+                        },
+                        {
+                          "type": "box",
+                          "height": 14
+                        },
+                        {
+                          "type": "text",
+                          "content": "EDITS REPORTED · {{edits.length}}",
+                          "style": {
+                            "fontSize": 11,
+                            "letterSpacing": 1.8,
+                            "color": "{{theme.color.onSurfaceVariant}}"
+                          }
+                        },
+                        {
+                          "type": "box",
+                          "height": 6
+                        },
+                        {
+                          "type": "list",
+                          "items": "{{edits}}",
+                          "shrinkWrap": true,
+                          "itemTemplate": {
+                            "type": "text",
+                            "content": "{{item.item}} · {{item.column}} {{item.from}} → {{item.to}}",
+                            "style": {
+                              "fontSize": 12,
+                              "color": "{{theme.color.onSurface}}"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "container",
+            "padding": {
+              "left": 24,
+              "right": 24,
+              "top": 14,
+              "bottom": 16
+            },
+            "decoration": {
+              "color": "{{theme.color.surface}}",
+              "border": {
+                "top": true,
+                "color": "{{theme.color.outline}}",
+                "width": 1
+              }
+            },
+            "child": {
+              "type": "linear",
+              "direction": "horizontal",
+              "crossAxisAlignment": "center",
+              "children": [
+                {
+                  "type": "expanded",
+                  "child": {
+                    "type": "text",
+                    "content": "A widget reports an edit; the document decides what it means. Nothing on this screen rewrites its own rows.",
+                    "style": {
+                      "fontSize": 13,
+                      "color": "{{theme.color.onSurfaceVariant}}"
+                    }
+                  }
+                },
+                {
+                  "type": "box",
+                  "width": 16
+                },
+                {
+                  "type": "text",
+                  "content": "{{lastEdit}}",
+                  "style": {
+                    "fontSize": 13,
+                    "color": "{{theme.color.onSurface}}"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "else": {
+      "type": "container",
+      "decoration": {
+        "color": "{{theme.color.surfaceContainerHighest}}"
+      },
+      "child": {
+        "type": "linear",
+        "direction": "vertical",
+        "crossAxisAlignment": "stretch",
+        "children": [
+          {
+            "type": "container",
+            "padding": {
+              "left": 24,
+              "right": 24,
+              "top": 20,
+              "bottom": 16
+            },
+            "decoration": {
+              "color": "{{theme.color.surface}}",
+              "border": {
+                "bottom": true,
+                "color": "{{theme.color.outline}}",
+                "width": 1
+              }
+            },
+            "child": {
+              "type": "linear",
+              "direction": "vertical",
+              "crossAxisAlignment": "start",
+              "spacing": 6,
+              "children": [
+                {
+                  "type": "linear",
+                  "direction": "vertical",
+                  "children": [
+                    {
+                      "type": "text",
+                      "content": "{{job}}",
+                      "style": {
+                        "fontSize": 12,
+                        "letterSpacing": 2.2,
+                        "color": "{{theme.color.onSurfaceVariant}}"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "content": "Closing sheet",
+                      "style": {
+                        "fontSize": 21,
+                        "fontWeight": "bold",
+                        "color": "{{theme.color.onSurface}}"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "wrap",
+                  "spacing": 8,
+                  "runSpacing": 6,
+                  "children": [
+                    {
+                      "type": "linear",
+                      "direction": "vertical",
+                      "crossAxisAlignment": "end",
+                      "children": [
+                        {
+                          "type": "text",
+                          "content": "{{lead}}",
+                          "style": {
+                            "fontSize": 13,
+                            "color": "{{theme.color.onSurface}}"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "content": "{{closes}}",
+                          "style": {
+                            "fontSize": 12,
+                            "color": "{{theme.color.onSurfaceVariant}}"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "button",
+                      "label": "Programme →",
+                      "variant": "outlined",
+                      "onTap": {
+                        "type": "navigation",
+                        "action": "push",
+                        "route": "/plan"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "type": "expanded",
+            "child": {
+              "type": "scrollView",
+              "children": [
+                {
+                  "type": "linear",
+                  "direction": "vertical",
+                  "crossAxisAlignment": "stretch",
+                  "children": [
+                    {
+                      "type": "container",
+                      "padding": {
+                        "left": 20,
+                        "right": 20,
+                        "top": 18
+                      },
+                      "child": {
+                        "type": "linear",
+                        "direction": "vertical",
+                        "crossAxisAlignment": "stretch",
+                        "spacing": 12,
+                        "children": [
+                          {
+                            "type": "container",
+                            "padding": {
+                              "all": 16
+                            },
+                            "decoration": {
+                              "color": "{{theme.color.surface}}",
+                              "borderRadius": 12,
+                              "border": {
+                                "color": "{{theme.color.outline}}",
+                                "width": 1
+                              }
+                            },
+                            "child": {
+                              "type": "linear",
+                              "direction": "vertical",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "content": "LINES · tap a header to sort · tap a qty or rate, type, press Enter",
+                                  "style": {
+                                    "fontSize": 11,
+                                    "letterSpacing": 1.8,
+                                    "color": "{{theme.color.onSurfaceVariant}}"
+                                  }
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "dataTable",
+                                  "columns": [
+                                    {
+                                      "key": "item",
+                                      "label": "Item",
+                                      "sortable": true,
+                                      "width": 230
+                                    },
+                                    {
+                                      "key": "trade",
+                                      "label": "Trade",
+                                      "sortable": true,
+                                      "width": 120
+                                    },
+                                    {
+                                      "key": "qty",
+                                      "label": "Qty",
+                                      "align": "end",
+                                      "width": 70
+                                    },
+                                    {
+                                      "key": "unit",
+                                      "label": "Unit",
+                                      "width": 70
+                                    },
+                                    {
+                                      "key": "rate",
+                                      "label": "Rate ($)",
+                                      "align": "end",
+                                      "width": 120
+                                    },
+                                    {
+                                      "key": "amount",
+                                      "label": "Amount ($)",
+                                      "align": "end",
+                                      "sortable": true,
+                                      "width": 140
+                                    }
+                                  ],
+                                  "rows": "{{lines}}",
+                                  "editable": true,
+                                  "sortColumn": "{{sortColumn}}",
+                                  "sortAscending": "{{sortAscending}}",
+                                  "onSort": {
+                                    "type": "batch",
+                                    "actions": [
+                                      {
+                                        "type": "state",
+                                        "action": "set",
+                                        "binding": "sortColumn",
+                                        "value": "{{event.column}}"
+                                      },
+                                      {
+                                        "type": "state",
+                                        "action": "set",
+                                        "binding": "sortAscending",
+                                        "value": "{{event.ascending}}"
+                                      }
+                                    ]
+                                  },
+                                  "onRowTap": {
+                                    "type": "state",
+                                    "action": "set",
+                                    "binding": "pick",
+                                    "value": "{{event.row.item}} · {{event.row.trade}} · {{event.row.qty}} {{event.row.unit}} × {{event.row.rate}} = {{event.row.amount}} $"
+                                  },
+                                  "onCellEdit": {
+                                    "type": "batch",
+                                    "actions": [
+                                      {
+                                        "type": "state",
+                                        "action": "set",
+                                        "binding": "lastEdit",
+                                        "value": "{{event.row.item}} · {{event.column}}: {{event.previous}} → {{event.value}}"
+                                      },
+                                      {
+                                        "type": "state",
+                                        "action": "append",
+                                        "binding": "edits",
+                                        "value": {
+                                          "item": "{{event.row.item}}",
+                                          "column": "{{event.column}}",
+                                          "from": "{{event.previous}}",
+                                          "to": "{{event.value}}"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 10
+                                },
+                                {
+                                  "type": "text",
+                                  "content": "{{pick}}",
+                                  "style": {
+                                    "fontSize": 13,
+                                    "color": "{{theme.color.onSurface}}"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "container",
+                            "padding": {
+                              "all": 16
+                            },
+                            "decoration": {
+                              "color": "{{theme.color.surface}}",
+                              "borderRadius": 12,
+                              "border": {
+                                "color": "{{theme.color.outline}}",
+                                "width": 1
+                              }
+                            },
+                            "child": {
+                              "type": "linear",
+                              "direction": "vertical",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "content": "SETTLEMENT · formulas read the state on the left",
+                                  "style": {
+                                    "fontSize": 11,
+                                    "letterSpacing": 1.8,
+                                    "color": "{{theme.color.onSurfaceVariant}}"
+                                  }
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "spreadsheet",
+                                  "data": "{{settlement}}",
+                                  "columns": [
+                                    {
+                                      "label": "Line",
+                                      "readOnly": true
+                                    },
+                                    {
+                                      "label": "$"
+                                    }
+                                  ],
+                                  "formulas": true,
+                                  "editable": true,
+                                  "rowHeaders": false,
+                                  "onChange": {
+                                    "type": "state",
+                                    "action": "set",
+                                    "binding": "lastEdit",
+                                    "value": "sheet {{event.row}},{{event.column}}: {{event.previous}} → {{event.value}}"
+                                  }
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 14
+                                },
+                                {
+                                  "type": "text",
+                                  "content": "INPUTS",
+                                  "style": {
+                                    "fontSize": 11,
+                                    "letterSpacing": 1.8,
+                                    "color": "{{theme.color.onSurfaceVariant}}"
+                                  }
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 6
+                                },
+                                {
+                                  "type": "text",
+                                  "content": "contractSum {{contractSum}} · variations {{variations}} · retention {{retention}} · deposit {{deposit}}",
+                                  "style": {
+                                    "fontSize": 12,
+                                    "color": "{{theme.color.onSurfaceVariant}}"
+                                  }
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 14
+                                },
+                                {
+                                  "type": "text",
+                                  "content": "EDITS REPORTED · {{edits.length}}",
+                                  "style": {
+                                    "fontSize": 11,
+                                    "letterSpacing": 1.8,
+                                    "color": "{{theme.color.onSurfaceVariant}}"
+                                  }
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 6
+                                },
+                                {
+                                  "type": "list",
+                                  "items": "{{edits}}",
+                                  "shrinkWrap": true,
+                                  "itemTemplate": {
+                                    "type": "text",
+                                    "content": "{{item.item}} · {{item.column}} {{item.from}} → {{item.to}}",
+                                    "style": {
+                                      "fontSize": 12,
+                                      "color": "{{theme.color.onSurface}}"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "container",
+                      "padding": {
+                        "left": 24,
+                        "right": 24,
+                        "top": 14,
+                        "bottom": 16
+                      },
+                      "decoration": {
+                        "color": "{{theme.color.surface}}",
+                        "border": {
+                          "top": true,
+                          "color": "{{theme.color.outline}}",
+                          "width": 1
+                        }
+                      },
+                      "child": {
+                        "type": "linear",
+                        "direction": "vertical",
+                        "crossAxisAlignment": "start",
+                        "spacing": 6,
+                        "children": [
+                          {
+                            "type": "text",
+                            "content": "A widget reports an edit; the document decides what it means. Nothing on this screen rewrites its own rows.",
+                            "style": {
+                              "fontSize": 13,
+                              "color": "{{theme.color.onSurfaceVariant}}"
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "content": "{{lastEdit}}",
+                            "style": {
+                              "fontSize": 13,
+                              "color": "{{theme.color.onSurface}}"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
   }
- }
 }
